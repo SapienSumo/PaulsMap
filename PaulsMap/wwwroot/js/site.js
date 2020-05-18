@@ -1,7 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
+// Google map code.
 
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -20,10 +20,17 @@ function initAutocomplete() {
 
     var markers = [];
 
-    var button = document.getElementById('button1');
+    /*var button = document.getElementById('button1');
 
     button.addEventListener('click', function () {
+        var places = searchBox.getPlaces(); */
+
+    searchBox.addListener('places_changed', function () {
         var places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+            return;
+        }  
 
 
         markers.forEach(function (marker) {

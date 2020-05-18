@@ -7,13 +7,9 @@
     <br />
 </div>
 
-
-
 @{
     ViewData["Title"] = "My Google Map | 14.05.2020";
 }
-
-
 
 <h3>@ViewData["Title"]</h3>
 <meta charset="utf-8">
@@ -24,9 +20,8 @@
 <title>Places Searchbox</title>
 
 <input id="pac-input" type="text" placeholder="Search...">
-<input id="button1" value="Search" sstyle="margin-bottom:10px;" type="button" />
-<h5 style="color: navy; font: BlinkMacSystemFont;">🔍 Input a location to begin your search...</h5>
-<div>Select location from drop down list, then click the search button</div>
+@*<input id="button1" value="Search" sstyle="margin-bottom:10px;" type="button" />*@
+<h5 style="color: navy; font: BlinkMacSystemFont;">Enter your location and select from the list of drop downs...</h5>
 <div id="map"></div>
 
 @* I have now tidied up and put the static google map code in the js folder in wwwroot  *@
@@ -37,4 +32,4 @@
 
 <footer>
     <p style="font-weight: bold; color:black; text-align: center;">© @DateTime.Now.ToLocalTime()</p> @*Add Date Time*@
-</footer>
+</footer> 
